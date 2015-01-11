@@ -1,5 +1,5 @@
 #RandomItemDrop
- * Version: 1.2.2
+ * Version: 1.2.3
  * Plugin needed: Vault
  * Author: [Gerviba]
  * License: Creative Commons 4.0 (BY-NC-SA)

@@ -31,7 +31,7 @@ public class Configuration {
 		final File FILE = new File("plugins/RandomItemDrop", "Lang.yml");
 		final FileConfiguration cfg = YamlConfiguration.loadConfiguration(FILE);
 		
-		cfg.addDefault("RandomItemDrop.enable", false);
+		cfg.addDefault("RandomItemDrop.enable", true);
 		cfg.addDefault("RandomItemDrop.RELOAD", "§cKonfiguráció újratöltése sikeres! :)");
 		cfg.addDefault("RandomItemDrop.GET", "§e§l<Money>§e pénz a jutalmad!");
 		cfg.addDefault("RandomItemDrop.timerMinutes", 3);

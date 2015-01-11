@@ -1,0 +1,5 @@
+name: RandomItemDrop
+version: 1.2.2
+author: Gerviba
+main: hu.Gerviba.RandomItemDrop.Core
+depend: [Vault]

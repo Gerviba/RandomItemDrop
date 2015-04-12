@@ -7,6 +7,7 @@ import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerCommandPreprocessEvent;
 import org.bukkit.event.player.PlayerPickupItemEvent;
+import org.bukkit.event.world.ChunkUnloadEvent;
 
 public class EventListener implements Listener {
 
@@ -65,6 +66,16 @@ public class EventListener implements Listener {
 			Util.addMoney(event.getPlayer(), dii.getMoney());
 			event.getPlayer().sendMessage(Configuration.LANG_GET.replace("<Money>", ""+dii.getMoney()));
 			event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.LEVEL_UP, 2F, 2F);
+		}
+	}
+	
+	@EventHandler(priority=EventPriority.HIGHEST, ignoreCancelled=false)
+	public void onChunkUnload(final ChunkUnloadEvent event) {
+		for(DropableItemInfo dii : DropableItemInfo.ITEM_INFOS.values()) {
+			if(dii.getLocation().getChunk().equals(event.getChunk())) {
+				event.setCancelled(true);
+				return;
+			}
 		}
 	}
 	

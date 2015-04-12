@@ -1,5 +1,5 @@
 #RandomItemDrop
- * Version: 1.2.3
+ * Version: 1.2.4
  * Plugin needed: Vault
  * Author: [Gerviba]
  * License: Creative Commons 4.0 (BY-NC-SA)
@@ -9,6 +9,7 @@ Put the jar file into the plugins folder and start your server. After it loaded,
 
 ```
 	- world, 0.0, 0.0, 0.0, GOLD_INGOT, 35.125
+	- world, 0.0, 0.0, 0.0, #266, 35.125
 ```
 
 The parameters are:
@@ -16,13 +17,13 @@ The parameters are:
  * The X coordinate
  * The Y coordinate
  * The Z coordinate
- * The Material of the droped item
- * The Money what the picker get
+ * The Material of the droped item OR #<id of the item>
+ * The Money what the picker gets
 
-If you finished, you can start your server and enjoy the plugin! Have fun!
+If you've finished, you can start your server and enjoy the plugin! Have fun!
 
 ##Donate: 
-This plugin is free but you can donate if you wish! :)
+This plugin is free but you can donate if you wish! :) 
 [Donate] here!
 
 ##Disclaimer

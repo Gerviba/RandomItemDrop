@@ -2,6 +2,7 @@ package hu.Gerviba.RandomItemDrop;
 
 import java.util.HashMap;
 
+import org.bukkit.Bukkit;
 import org.bukkit.Effect;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -34,7 +35,6 @@ public class DropableItemInfo {
 		ItemMeta im = this.drop.getItemMeta();
 		im.setDisplayName(UUID);
 		this.drop.setItemMeta(im);
-
 	}
 
 	public boolean isDroped() {
@@ -68,14 +68,38 @@ public class DropableItemInfo {
 	
 	public boolean dropIt() {
 		if(isDroped) return false;
-		Item i = location.getWorld().dropItem(this.location, this.drop);
+		final Item i = location.getWorld().dropItem(this.location, this.drop);
 		i.getWorld().playEffect(this.location, Effect.MOBSPAWNER_FLAMES, 0);
 		i.teleport(this.location);
 		i.setVelocity(new Vector(0, 0, 0));
 		i.teleport(this.location);
 		i.getWorld().playEffect(this.location, Effect.MOBSPAWNER_FLAMES, 0);
 		
-		Util.info(UUID + " (RE)dropped!");
+		Bukkit.getScheduler().scheduleSyncDelayedTask(Core.getInstance(), new Runnable() {
+			@Override
+			public void run() {
+				try {
+					if(i != null && i.isValid() && !i.isDead()) {
+						i.setVelocity(new Vector(0, 0, 0));
+						i.teleport(location);
+					}
+				} catch(Exception e) {}
+			}
+		}, 20);
+		
+		Bukkit.getScheduler().scheduleSyncDelayedTask(Core.getInstance(), new Runnable() {
+			@Override
+			public void run() {
+				try {
+					if(i != null && i.isValid() && !i.isDead()) {
+						i.setVelocity(new Vector(0, 0, 0));
+						i.teleport(location);
+					}
+				} catch(Exception e) {}
+			}
+		}, 40);
+		
+		//Util.info(UUID + " (RE)dropped!");
 		isDroped = true;
 		return true;
 	}

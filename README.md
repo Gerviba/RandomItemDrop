@@ -27,7 +27,7 @@ This plugin is free but you can donate if you wish! :)
 [Donate] here!
 
 ##Disclaimer
-I wrote this plugin a long time ago. There might be a problem with the new versions, though not in principle.
+I wrote this plugin a long time ago. There might be a problem with the new versions, though not in principle. 
 
 * This project is under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International license (CC BY-NC-SA 4.0)
 

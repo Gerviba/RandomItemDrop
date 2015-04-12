@@ -99,7 +99,7 @@ public class DropableItemInfo {
 			}
 		}, 40);
 		
-		//Util.info(UUID + " (RE)dropped!");
+		//Debug: Util.info(UUID + " (RE)dropped!");
 		isDroped = true;
 		return true;
 	}

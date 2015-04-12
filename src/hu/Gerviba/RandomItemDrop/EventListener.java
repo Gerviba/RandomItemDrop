@@ -69,7 +69,7 @@ public class EventListener implements Listener {
 		}
 	}
 	
-	@EventHandler(priority=EventPriority.HIGHEST, ignoreCancelled=false)
+	@EventHandler(priority=EventPriority.MONITOR, ignoreCancelled=false)
 	public void onChunkUnload(final ChunkUnloadEvent event) {
 		for(DropableItemInfo dii : DropableItemInfo.ITEM_INFOS.values()) {
 			if(dii.getLocation().getChunk().equals(event.getChunk())) {

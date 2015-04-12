@@ -17,7 +17,7 @@ The parameters are:
  * The X coordinate
  * The Y coordinate
  * The Z coordinate
- * The Material of the droped item OR #<id of the item>
+ * The Material of the droped item OR # < id of the item >
  * The Money what the picker gets
 
 If you've finished, you can start your server and enjoy the plugin! Have fun!

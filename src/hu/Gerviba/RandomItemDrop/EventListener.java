@@ -9,6 +9,10 @@ import org.bukkit.event.player.PlayerCommandPreprocessEvent;
 import org.bukkit.event.player.PlayerPickupItemEvent;
 import org.bukkit.event.world.ChunkUnloadEvent;
 
+/**
+ * Item Drop Plugin
+ * @author Gerviba
+ */
 public class EventListener implements Listener {
 
 	@EventHandler(priority=EventPriority.LOW, ignoreCancelled=true)
@@ -48,7 +52,7 @@ public class EventListener implements Listener {
 				});	
 			}
 			
-			event.getPlayer().sendMessage("§7[§eRandomItemDrop§7]§f A plugint készítette: §e§lGerviba");
+			event.getPlayer().sendMessage("§7[§eRandomItemDrop§7]§f Plugin created by: §e§lGerviba");
 			event.getPlayer().sendMessage("§7[§eRandomItemDrop§7]§f https://github.com/Gerviba §7|§f http://Gerviba.hu");
 			
 		}

@@ -13,6 +13,10 @@ import org.bukkit.util.Vector;
 
 import com.sun.istack.internal.NotNull;
 
+/**
+ * Item Drop Plugin
+ * @author Gerviba
+ */
 public class DropableItemInfo {
 
 	public static HashMap<String, DropableItemInfo> ITEM_INFOS = new HashMap<String, DropableItemInfo>();
@@ -28,6 +32,8 @@ public class DropableItemInfo {
 		this.UUID = UUID;
 		this.material = material;
 		this.location = location;
+		if(location.getY() == Math.floor(location.getY()))
+			this.location.add(0, 0.1, 0);
 		this.money = Math.abs(money);
 		this.isDroped = false;
 		
@@ -86,18 +92,6 @@ public class DropableItemInfo {
 				} catch(Exception e) {}
 			}
 		}, 20);
-		
-		Bukkit.getScheduler().scheduleSyncDelayedTask(Core.getInstance(), new Runnable() {
-			@Override
-			public void run() {
-				try {
-					if(i != null && i.isValid() && !i.isDead()) {
-						i.setVelocity(new Vector(0, 0, 0));
-						i.teleport(location);
-					}
-				} catch(Exception e) {}
-			}
-		}, 40);
 		
 		//Debug: Util.info(UUID + " (RE)dropped!");
 		isDroped = true;

@@ -11,6 +11,10 @@ import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Item;
 
+/**
+ * Item Drop Plugin
+ * @author Gerviba
+ */
 public class Configuration {
 
 	public static String LANG_RELOADED;
@@ -32,8 +36,8 @@ public class Configuration {
 		final FileConfiguration cfg = YamlConfiguration.loadConfiguration(FILE);
 		
 		cfg.addDefault("RandomItemDrop.enable", true);
-		cfg.addDefault("RandomItemDrop.RELOAD", "§cKonfiguráció újratöltése sikeres! :)");
-		cfg.addDefault("RandomItemDrop.GET", "§e§l<Money>§e pénz a jutalmad!");
+		cfg.addDefault("RandomItemDrop.RELOAD", "§cReload completed! :)");
+		cfg.addDefault("RandomItemDrop.GET", "§eYou've just found §l<Money>§e money!");
 		cfg.addDefault("RandomItemDrop.timerMinutes", 3);
 
 		cfg.options().copyDefaults(true);
@@ -51,10 +55,10 @@ public class Configuration {
 		final FileConfiguration cfg = YamlConfiguration.loadConfiguration(FILE);
 		
 		cfg.addDefault("ItemInfos", Arrays.asList(
-				"world, 0.0, 0.0, 0.0, GOLD_INGOT, 35.125", 
-				"world, 0.0, 0.0, 0.0, GOLD_INGOT, 35.125", 
-				"world, 0.0, 0.0, 0.0, GOLD_INGOT, 35.125", 
-				"world, 0.0, 0.0, 0.0, GOLD_INGOT, 35.125"));
+				"world, 0.5, 0.1, 0.5, GOLD_INGOT, 35.5", 
+				"world, 0.5, 0.1, 0.5, GOLD_INGOT, 45.5", 
+				"world, 0.5, 0.1, 0.5, GOLD_INGOT, 55.5", 
+				"world, 0.5, 0.1, 0.5, GOLD_INGOT, 65.5"));
 
 		cfg.options().copyDefaults(true);
 		cfg.save(FILE);

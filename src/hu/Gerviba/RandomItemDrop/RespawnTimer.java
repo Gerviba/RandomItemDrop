@@ -4,6 +4,10 @@ import java.util.concurrent.TimeUnit;
 
 import org.bukkit.Bukkit;
 
+/**
+ * Item Drop Plugin
+ * @author Gerviba
+ */
 public class RespawnTimer extends Thread {
 
 	public static RespawnTimer INSTANCE = null;

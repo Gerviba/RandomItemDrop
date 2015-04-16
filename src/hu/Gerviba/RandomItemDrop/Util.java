@@ -10,6 +10,10 @@ import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.RegisteredServiceProvider;
 
+/**
+ * Item Drop Plugin
+ * @author Gerviba
+ */
 public class Util {
 
 	public static Economy ECONOMY = null;
@@ -45,6 +49,7 @@ public class Util {
 		
 	}
 	
+	@SuppressWarnings("deprecation")
 	private static Material getMaterrialByID(String value, Material defaultValue) {
 		try {
 			return Material.getMaterial(Integer.parseInt(value));
@@ -70,7 +75,10 @@ public class Util {
 				Util.ECONOMY.depositPlayer(player.getName(), money);
 		} catch(Exception e) {
 			if(Configuration.IS_VAULT_LOADED)
-				Util.ECONOMY.depositPlayer(Bukkit.getOfflinePlayer(player.getName()), money);
+				if(Core.is1_8)
+					Util.ECONOMY.depositPlayer(Bukkit.getOfflinePlayer(player.getUniqueId()), money);
+				else
+					Util.ECONOMY.depositPlayer(Bukkit.getOfflinePlayer(player.getName()), money);
 		}
 	}
 	

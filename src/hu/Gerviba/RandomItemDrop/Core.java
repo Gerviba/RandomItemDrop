@@ -10,6 +10,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class Core extends JavaPlugin {
 
 	private static Core INSTANCE;
+	public static boolean is1_8 = Bukkit.getVersion().contains("1.8");
 	
 	public Core() {
 		INSTANCE = this;

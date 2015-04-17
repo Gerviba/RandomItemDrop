@@ -6,12 +6,12 @@
  * License: Creative Commons 4.0 (BY-NC-SA)
 
 ##Description:
-The plugin drops items to the configured coordinates and when the player picks up the item, he/she gets money. Recommend this plugin for SkyPVP, KitPVP, Prison or any SMP servers.​
+The plugin drops items to the configured coordinates and when the player picks up the item, he/she gets money. Recommend this plugin for SkyPVP, KitPVP, Prison or any SMP servers.
 
 ##Commands:
-/rid - Random Item Drop
-/rid reload - Reloads the configuration (for OPs only)
-/rid redrop - Drops the items again (for OPs only)​
+ * /rid - Random Item Drop
+ * /rid reload - Reloads the configuration (for OPs only)
+ * /rid redrop - Drops the items again (for OPs only)
 
 ##How to configure?
 Put the jar file into the plugins folder and start your server. After it loaded, it will generate the config files and disable the plugin. You need to open the 'Lang.yml' in the 'plugins/RandomItemDrop' folder and set the values. After that, you should set the coordinates of the items in the 'ItemInfos.yml' at the same location. You will see something like that:
@@ -22,7 +22,7 @@ Put the jar file into the plugins folder and start your server. After it loaded,
 ```
 
 The parameters are:
- * The World
+ * The name of the World
  * The X coordinate (Use .5 ending to align the item to the center of the coordinate.)
  * The Y coordinate
  * The Z coordinate (Same as X coordinates.)

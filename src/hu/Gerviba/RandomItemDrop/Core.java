@@ -29,7 +29,7 @@ public class Core extends JavaPlugin {
 			Bukkit.getPluginManager().registerEvents(new EventListener(), this);
 			
 			Util.info("Starting threads...");
-			new RespawnTimer().start();
+			Bukkit.getScheduler().scheduleSyncRepeatingTask(this, new RespawnTimer(), Configuration.DELAY_TIME, Configuration.DELAY_TIME);
 			
 			Util.info("RandomItemDrop is ready! v"+getDescription().getVersion()+" //Gerviba");
 		} catch(Exception e) {

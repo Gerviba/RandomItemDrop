@@ -21,7 +21,7 @@ public class Configuration {
 	public static String LANG_GET;
 	
 	public static boolean IS_VAULT_LOADED = false;
-	public static int DELAY_TIME = 1;
+	public static int DELAY_TIME = 1200;
 	
 	public static void init() throws Exception {
 		loadConfig();
@@ -47,7 +47,7 @@ public class Configuration {
 
 		LANG_RELOADED = cfg.getString("RandomItemDrop.RELOAD");
 		LANG_GET = cfg.getString("RandomItemDrop.GET");
-		DELAY_TIME = cfg.getInt("RandomItemDrop.timerMinutes");
+		DELAY_TIME = Math.max(cfg.getInt("RandomItemDrop.timerMinutes"), 1) * 1200;
 	}
 	
 	private static void loadConfig() throws Exception {
